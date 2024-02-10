@@ -1,5 +1,41 @@
 ```csharp
 // \u000e\u000f\u0002
+private static void \u0002(WebRequest \u0002)
+{
+	object[] array = new object[1] { \u0002 };
+	\u0005\u0015\u0002.b().\u0002(\u0005\u0015\u0002.\u000e\u0015\u0002(), "H@'o.IXcKg", array);
+}
+
+private static void \u0002(HttpConnectionOptions \u0002)
+{
+	object[] array = new object[1] { \u0002 };
+	\u0005\u0015\u0002.b().\u0002(\u0005\u0015\u0002.\u000e\u0015\u0002(), "H@'mQIXc<b", array);
+}
+
+private static string \u0002(byte[] \u0002)
+{
+	object[] array = new object[1] { \u0002 };
+	return (string)\u0005\u0015\u0002.b().\u0002(\u0005\u0015\u0002.\u000e\u0015\u0002(), "H@'nNIXbsX", array);
+}
+```
+
+```csharp
+// osu.Game.Auth.Loader
+private void \u0002()
+	{
+		object[] array = new object[1] { this };
+		\u0005\u0015\u0002.b().\u0002(\u0005\u0015\u0002.\u000e\u0015\u0002(), "H@'nkIXcfp", array);
+	}
+
+	public void Dispose()
+	{
+		object[] array = new object[1] { this };
+		\u0005\u0015\u0002.b().\u0002(\u0005\u0015\u0002.\u000e\u0015\u0002(), "H@'m]IXciq", array);
+	}
+```
+
+```csharp
+// \u000e\u000f\u0002
 using System.Reflection;
 using osu.Framework.IO.Network;
 using osu.Game.Online;

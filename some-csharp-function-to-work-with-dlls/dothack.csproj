@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Connections.Client" Version="8.0.1" />
+    <PackageReference Include="System.Text.Json" Version="8.0.1" />
+    <Reference Include="osu.Framework">
+      <HintPath>.\osu.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm">
+      <HintPath>.\Realm.dll</HintPath>
+    </Reference>
+    <Reference Include="osuTK">
+      <HintPath>.\osuTK.dll</HintPath>
+    </Reference>
+    <Reference Include="osu.Game">
+      <HintPath>.\osu.Game.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

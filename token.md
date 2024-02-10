@@ -45,12 +45,6 @@ Data needed to complete the test:
 Notes:
 (LIKELY) ClientHash is *NOT* the `File.OpenRead(typeof(OsuGameBase).Assembly.Location))`!
 
-clienthash: 613db83fe458912a286a5ca3adca0f9f
-buildid: b702d10a30e44886209861479673985f
-version: "12"
-expected:
-
-
 # Source
 
 https://github.com/ppy/osu-web/blob/3103311c07f05a4f0287e7500dccf11e17aad3c8/app/Http/Controllers/ScoreTokensController.php#L50

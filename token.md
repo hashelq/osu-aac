@@ -1,9 +1,12 @@
 # Definition
+
 Token is a `x-token` header sent by the client to the server every time you submit ascore.
 
 # Format
+
 A string consisting of [0-N characters][82 bytes of token data];
 Token data is
+
 ```
 [0      32           40                       80  82]
 [       ==============                              ] -  ClientTimeHex
@@ -17,6 +20,7 @@ Notes:
 ClientData is a set of ClientTimeHex + ClientHash
 
 Based on this data, the "expected" value is calculated as
+
 ```php
 $build = Build::firstWhere([
     'hash' => $input['clientHash'],
@@ -34,16 +38,18 @@ $computed = hash_hmac(
 After that, the check is done.
 
 Notes:
-* ClientTime check is `if (abs($now - $input['clientTime']) > $GLOBALS['cfg']['osu']['client']['token_lifetime']) {`
+
+- ClientTime check is `if (abs($now - $input['clientTime']) > $GLOBALS['cfg']['osu']['client']['token_lifetime']) {`
   So, better set it to nearby the end of the universe.
-(LIKELY) Client version is not used
+  (LIKELY) Client version is not used
 
 Data needed to complete the test:
-* ClientHash
-* BuildID
+
+- ClientHash
+- BuildID
 
 Notes:
-(LIKELY) ClientHash is *NOT* the `File.OpenRead(typeof(OsuGameBase).Assembly.Location))`!
+(LIKELY) ClientHash is _NOT_ the `File.OpenRead(typeof(OsuGameBase).Assembly.Location))`!
 
 # Source
 

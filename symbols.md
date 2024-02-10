@@ -23,53 +23,6 @@ private bool \u0002()
 ```
 
 ```csharp
-// \u000f\u000f\u0002
-using System;
-using System.IO;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using osu.Framework.Logging;
-
-public async Task \u0003()
-{
-	try
-	{
-		HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, \u000f\u0010\u0002.\u0002(-1506375791));
-		string content = JsonSerializer.Serialize(new global::\u0002<string, string, \u0002\u0010\u0002.\u0002>(\u000f\u000f\u0002.\u0002(), \u000f, \u0002\u0010\u0002.\u0002()));
-		httpRequestMessage.Content = new StringContent(content, Encoding.UTF8, \u000f\u0010\u0002.\u0002(-1506376117));
-		string text = \u000e\u000f\u0002.\u0002();
-		if (!string.IsNullOrEmpty(text))
-		{
-                                          // x-token                               *value*
-			httpRequestMessage.Headers.Add(\u000f\u0010\u0002.\u0002(-1506376108), \u000f\u0010\u0002.\u0002(-1506376096) + text);
-		}
-		HttpResponseMessage httpResponseMessage = await this.\u0003.SendAsync(httpRequestMessage, this.\u0005.Token);
-		if (!httpResponseMessage.IsSuccessStatusCode)
-		{
-			return;
-		}
-		\u0008\u0010\u0002 obj = await httpResponseMessage.Content.ReadFromJsonAsync<\u0008\u0010\u0002>(new JsonSerializerOptions
-		{
-			PropertyNameCaseInsensitive = true
-		}, this.\u0005.Token);
-		if (obj != null && obj.Url != null)
-		{
-			using Stream stream = await this.\u0003.GetStreamAsync(obj.Url, this.\u0005.Token);
-			\u0002(stream);
-			await this.\u0005();
-		}
-	}
-	catch (Exception ex)
-	{
-		Logger.Log(ex.ToString(), LoggingTarget.Network);
-	}
-}
-```
-
-```csharp
 // osu.Game.Online.HubClientConnector
 using System;
 using System.Collections.Generic;

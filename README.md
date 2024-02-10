@@ -18,7 +18,7 @@ Please don't cheat and don't use this code to cheat =].
 
 ## Therefore
 
-A OSU-AAC is a project that aims to completely disable osu-lazer client-side anticheat.
+A OSU-AAC is a project that aims to completely disable osu-lazer client-side anticheat and let people play osu lazer online with self-hosted binaries.
 
 If you want to participate, please look at the `token.md` and `symbols.md` file;
 

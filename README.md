@@ -1,36 +1,24 @@
-# OSU(lazer) Anti Anti Cheat Project
+# osu! AAC
 
-Recently, ppy emerged a spyware called "Osu anticheat" into osu lazer.
+An anti-anti-cheat for osu! that intercepts network communications to bypass server-side validation.
 
-## Warning for osu lazer player
+## Purpose
 
-DO NOT RUN any executable provided by ppy/osu repository as `release`.
-These binaries contain spyware and may potentialy be malware.
+The official osu! multiplayer system includes anti-cheat mechanisms that can incorrectly flag users. This project provides an alternative approach to interact with the game's network layer.
 
-**PEPPY is known for screeshoting player desktop..**
-[a similar reddit post, not a proof](https://www.reddit.com/r/osugame/comments/4ky41w/osu_source_code_leaked_confirms_ppy_and_devs_are/)
+## Disclaimer
 
-If anyone has a dump of the other thread with proofs, please pull request.
+**Do not use this for cheating or gaining an unfair advantage.** This project is for educational and research purposes only. Using it to gain unfair advantages may result in bans from osu! and may violate the game's terms of service.
 
-## Warning for cheaters/h0xx1rs
+## Documentation
 
-Please don't cheat and don't use this code to cheat =].
+- [`symbols.md`](./symbols.md) - C# hook implementations for network interception
+- [`token.md`](./token.md) - Token format specification and reverse engineering documentation
 
-## Therefore
+## How it works
 
-A OSU-AAC is a project that aims to completely disable osu-lazer client-side anticheat and let people play osu lazer online with self-hosted binaries.
+This project uses reflection-based hooks to intercept API requests and modify authentication tokens before they reach osu!'s servers. See the documentation files for implementation details.
 
-If you want to participate, please look at the `token.md` and `symbols.md` file;
+## License
 
-## Anticheat structure
-
-Anticheat is located in `Osu.Game.Auth.dll`, that can be found nearby the `osu!` binary.
-It loads as a dynamic library and links a `sign` into `ApiAccess` and `HubClientConnector`.
-
-Please note, that `Osu.Game` is also infected. Offical osu repo does not contain `sign` delegate, while binary release code does.
-
-Peppy obviously has a patch that is applied manually every single release.
-
-After doing that, a secret set of tokens are extracted/imported into both server and client anticheat.
-The tokens are used for signing **secured** methods like score submitting.
-Whats a shame, is that without a signature (`x-token` header) YOU CANNOT play multiplayer.
+Use responsibly and only for your own educational purposes.
